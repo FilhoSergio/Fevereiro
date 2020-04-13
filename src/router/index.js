@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-
+import NotFound from "../views/NotFound.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -10,6 +10,12 @@ const routes = [
     name: "Home",
     component: Home
   },
+  {
+    path: "/404",
+    name: "notFound.index",
+    component: NotFound
+  },
+  { path: "*", redirect: "/404" },
   {
     path: "/about",
     name: "About",
