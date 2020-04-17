@@ -1,6 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+// import Login from "@/views/Login.vue";
+// import SingUp from "@/components/Cadastro.vue";
 import NotFound from "../views/NotFound.vue";
 Vue.use(VueRouter);
 
@@ -10,6 +12,24 @@ const routes = [
     name: "Home",
     component: Home
   },
+  {
+    path: "/login",
+    name: "Login",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Login.vue")
+  },
+  {
+    path: "/cadastro",
+    name: "Cadastro",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/SingUp.vue")
+  }, {
+    path: "/dashboard",
+    name: "Dashboard",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Dashboard.vue")
+  },
+ 
   {
     path: "/404",
     name: "notFound.index",
@@ -29,8 +49,8 @@ const routes = [
 
 const router = new VueRouter({
   mode: "history",
-  base: process.env.BASE_URL,
   routes
 });
+// base: process.env.BASE_URL,
 
 export default router;

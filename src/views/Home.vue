@@ -1,11 +1,11 @@
 <template>
-  <div class="home">
+  <div class="home">    
     <Header> </Header>
     <Carousel></Carousel>
     <About style="padding: 1.5rem"> </About>
-    <Footer></Footer>
+    <Footer class="footer"></Footer>  
   </div>
-</template>
+</template>   
 
 <script>
 import Header from "@/components/Header.vue";
@@ -22,3 +22,10 @@ export default {
   }
 };
 </script>
+<style>
+.footer {
+    position:fixed;
+    bottom:0;
+    width:100%;
+}
+</style

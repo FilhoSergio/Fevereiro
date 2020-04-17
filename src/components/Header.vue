@@ -21,14 +21,26 @@
     <template slot="end">
       <b-navbar-item tag="div">
         <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light">
-            Log in
-          </a>
+          <router-link to="/cadastro">
+            <a class="button is-primary">
+              <strong>Sign up</strong>
+            </a>
+          </router-link>
+          <router-link to="/login">
+            <a class="button is-light">
+              Login
+            </a>
+          </router-link>
         </div>
       </b-navbar-item>
     </template>
   </b-navbar>
 </template>
+<script>
+export default {
+  
+}
+</script>
+<style>
+
+</style>
